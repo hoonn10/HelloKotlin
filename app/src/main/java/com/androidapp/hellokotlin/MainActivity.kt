@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         val btnJava = findViewById<Button>(R.id.btnJava)
         val btnKotlin = findViewById<Button>(R.id.btnKotlin)
+        val btnVarJava = findViewById<Button>(R.id.btnVarJava)
+        val btnVarKotlin = findViewById<Button>(R.id.btnVarKotlin)
 
         var intent : Intent //var 선언한 이유가 화면이 두개여서 값을 어떤 걸 하느냐에 따라 intent값이 달라져야 하기 때문에 var
 
@@ -28,6 +30,13 @@ class MainActivity : AppCompatActivity() {
         btnKotlin.setOnClickListener {
             intent = Intent(this@MainActivity, BmiKotlinActivity::class.java)
             startActivity(intent)
+        }
+
+        btnVarJava.setOnClickListener {
+            startActivity(Intent(this@MainActivity, VariableJavaActivity::class.java))
+        }
+        btnVarKotlin.setOnClickListener {
+            startActivity(Intent(this@MainActivity, VariableKotlinActivity::class.java))
         }
     }
 }
