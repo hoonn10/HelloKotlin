@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         val btnKotlin = findViewById<Button>(R.id.btnKotlin)
         val btnVarJava = findViewById<Button>(R.id.btnVarJava)
         val btnVarKotlin = findViewById<Button>(R.id.btnVarKotlin)
+        val btnFlowControlJava = findViewById<Button>(R.id.btnFlowControlJava)
+        val btnFlowControlKotlin = findViewById<Button>(R.id.btnFlowControlKotlin)
+
 
         var intent : Intent //var 선언한 이유가 화면이 두개여서 값을 어떤 걸 하느냐에 따라 intent값이 달라져야 하기 때문에 var
 
@@ -37,6 +40,14 @@ class MainActivity : AppCompatActivity() {
         }
         btnVarKotlin.setOnClickListener {
             startActivity(Intent(this@MainActivity, VariableKotlinActivity::class.java))
+        }
+
+        btnFlowControlJava.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FlowControlJavaActivity::class.java))
+        }
+
+        btnFlowControlKotlin.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FlowControlKotlinActivity::class.java))
         }
     }
 }
